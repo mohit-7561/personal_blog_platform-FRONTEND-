@@ -1,0 +1,161 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Typography */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Navbar */
+nav {
+  background-color: #333;
+  padding: 15px 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f39c12;
+}
+
+/* Blog List */
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.blog-post {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post h3 {
+  font-size: 1.6rem;
+  color: #f39c12;
+}
+
+.blog-post p {
+  color: #555;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.blog-post a {
+  text-decoration: none;
+  color: #f39c12;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* Post Form */
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #f39c12;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #e67e22;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-list {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  form {
+    width: 90%;
+    padding: 20px;
+  }
+}
