@@ -7,7 +7,7 @@ const BlogList = () => {
   useEffect(() => {
     const token = localStorage.getItem("jwt_token");
 
-    fetch("https://server-side-vkfa.onrender.com/api/posts", {
+    fetch("https://server-side-vkfa.onrender.com/api/posts/myPost", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

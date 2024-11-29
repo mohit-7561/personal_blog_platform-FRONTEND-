@@ -25,7 +25,7 @@ const Signup = () => {
 
     try {
       const response = await fetch(
-        "https://server-side-vkfa.onrender.com/api/signup",
+        "https://server-side-vkfa.onrender.com/api/auth/register",
         {
           method: "POST",
           headers: {

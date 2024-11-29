@@ -21,7 +21,7 @@ const CreatePost = () => {
 
     try {
       const response = await fetch(
-        "https://server-side-vkfa.onrender.com/api/posts",
+        "https://server-side-vkfa.onrender.com/api/posts/create",
         {
           method: "POST",
           headers: {
