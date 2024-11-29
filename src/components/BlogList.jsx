@@ -2,22 +2,22 @@ import React, { useEffect, useState } from "react";
 
 const BlogList = () => {
   const [posts, setPosts] = useState([]);
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    // Retrieve the JWT token from localStorage (or cookies/session storage)
     const token = localStorage.getItem("jwt_token");
 
-    // Fetch posts with authorization header
-    fetch("/api/posts", {
+    fetch("https://your-backend-url.onrender.com/api/posts", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`, // Include the JWT token
+        Authorization: `Bearer ${token}`,
       },
     })
       .then((response) => response.json())
       .then((data) => setPosts(data))
       .catch((error) => {
+        setError("Error fetching posts");
         console.error("Error fetching posts:", error);
       });
   }, []);
@@ -25,13 +25,14 @@ const BlogList = () => {
   return (
     <div>
       <h1>Blog Posts</h1>
+      {error && <p>{error}</p>}
       <ul>
         {posts.length === 0 ? (
           <p>No posts available</p>
         ) : (
           posts.map((post) => (
-            <li key={post._id || post.id}>
-              <a href={`/post/${post._id || post.id}`}>{post.title}</a>
+            <li key={post._id}>
+              <a href={`/post/${post._id}`}>{post.title}</a>
             </li>
           ))
         )}

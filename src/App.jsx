@@ -17,9 +17,12 @@ function App() {
           </li>
         </ul>
       </nav>
+
       <Routes>
         <Route path="/" element={<BlogList />} />
         <Route path="/create" element={<CreatePost />} />
+        {/* Fallback route for 404 */}
+        <Route path="*" element={<h2>Page Not Found</h2>} />
       </Routes>
     </Router>
   );
