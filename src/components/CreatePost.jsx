@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 
 const CreatePost = () => {
   const [title, setTitle] = useState("");
@@ -9,7 +11,7 @@ const CreatePost = () => {
     e.preventDefault();
 
     if (!title || !content) {
-      alert("Title and content are required.");
+      toast.error("Title and content are required.");
       return;
     }
 
@@ -33,14 +35,16 @@ const CreatePost = () => {
       if (response.ok) {
         setTitle("");
         setContent("");
-        alert("Post created successfully");
+        toast.success("Post created successfully");
       } else {
         const errorData = await response.json();
-        alert(errorData.message || "Failed to create post. Please try again.");
+        toast.error(
+          errorData.message || "Failed to create post. Please try again."
+        );
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Failed to create post. Please try again.");
+      toast.error("Failed to create post. Please try again.");
     } finally {
       setIsLoading(false);
     }
