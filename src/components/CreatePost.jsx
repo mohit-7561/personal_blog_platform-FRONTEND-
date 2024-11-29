@@ -18,14 +18,17 @@ const CreatePost = () => {
     const token = localStorage.getItem("jwt_token");
 
     try {
-      const response = await fetch("/api/posts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ title, content }),
-      });
+      const response = await fetch(
+        "https://server-side-vkfa.onrender.com/api/posts",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ title, content }),
+        }
+      );
 
       if (response.ok) {
         setTitle("");
