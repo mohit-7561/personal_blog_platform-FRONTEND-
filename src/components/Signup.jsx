@@ -3,21 +3,16 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Signup = () => {
+  const [name, setName] = useState(""); // Added Name state
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!email || !password || !confirmPassword) {
+    if (!name || !email || !password) {
       toast.error("Please fill in all fields.");
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      toast.error("Passwords do not match.");
       return;
     }
 
@@ -31,7 +26,7 @@ const Signup = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ email, password }),
+          body: JSON.stringify({ name, email, password }), // Added name to the request body
         }
       );
 
@@ -55,6 +50,12 @@ const Signup = () => {
     <form onSubmit={handleSubmit}>
       <h1>Signup</h1>
       <input
+        type="text"
+        placeholder="Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)} // Handling Name input
+      />
+      <input
         type="email"
         placeholder="Email"
         value={email}
@@ -65,12 +66,6 @@ const Signup = () => {
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Confirm Password"
-        value={confirmPassword}
-        onChange={(e) => setConfirmPassword(e.target.value)}
       />
       <button type="submit" disabled={isLoading}>
         {isLoading ? "Signing up..." : "Sign Up"}
