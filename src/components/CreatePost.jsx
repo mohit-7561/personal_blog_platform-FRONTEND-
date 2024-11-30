@@ -28,6 +28,7 @@ const CreatePost = () => {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
           },
+          withCredentials: true,
           body: JSON.stringify({ title, content }),
         }
       );

@@ -13,6 +13,7 @@ const BlogList = () => {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
+      withCredentials: true,
     })
       .then((response) => response.json())
       .then((data) => setPosts(data))
