@@ -1,8 +1,8 @@
-/* General styles */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f7fa;
-  padding-top: 60px; /* Space for the fixed navbar */
+  padding-top: 60px; 
   margin: 0;
   display: flex;
   justify-content: center;
@@ -22,13 +22,13 @@ form {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  width: 300px; /* Set a fixed width for the form */
+  width: 300px; 
   margin: 0 auto;
 }
 
 input,
 textarea {
-  width: 90%; /* Ensures inputs take up the full width of the container */
+  width: 90%; 
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ddd;
@@ -107,23 +107,22 @@ textarea {
   left: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visual depth */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   display: flex;
-  justify-content: center; /* Center the navbar content */
+  justify-content: center; 
   align-items: center;
 }
 
 /* Navbar links container */
 .navbar-links {
   display: flex;
-  justify-content: space-evenly; /* Distribute the items evenly */
-  width: 100%; /* Ensure links occupy full navbar width */
+  justify-content: space-evenly; 
+  width: 100%; 
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* Individual list item styling */
 .navbar-links li {
   margin: 0;
 }
@@ -137,7 +136,7 @@ textarea {
   padding: 8px 16px;
   border-radius: 4px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  display: block; /* Make the link a block element to support padding */
+  display: block; 
 }
 
 /* Hover effect on navbar links */

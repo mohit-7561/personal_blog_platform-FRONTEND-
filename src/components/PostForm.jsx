@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { createPost } from "../api";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // Make sure to import the CSS for styling
+import "react-toastify/dist/ReactToastify.css";
 
 const PostForm = ({ fetchPosts }) => {
   const [title, setTitle] = useState("");
@@ -21,12 +21,12 @@ const PostForm = ({ fetchPosts }) => {
 
     try {
       await createPost(newPost, token);
-      toast.success("Post created successfully!"); // Success toast
-      fetchPosts(); // Fetch the posts after creation
-      setTitle(""); // Clear the title
-      setContent(""); // Clear the content
+      toast.success("Post created successfully!");
+      fetchPosts();
+      setTitle("");
+      setContent("");
     } catch (err) {
-      toast.error("Error creating post. Please try again!"); // Error toast
+      toast.error("Error creating post. Please try again!");
       console.error("Error creating post", err);
     }
   };
