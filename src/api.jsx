@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5050/api";
+const API_URL = "https://server-side-vkfa.onrender.com/api";
 
 export const registerUser = (userData) => {
   return axios.post(`${API_URL}/auth/register`, userData);
