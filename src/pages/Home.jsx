@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { fetchPosts } from "../api";
-import "./Home.css"; // Importing the CSS file for styling
-
+import "./Home.css";
 const Home = () => {
   const [posts, setPosts] = useState([]);
 

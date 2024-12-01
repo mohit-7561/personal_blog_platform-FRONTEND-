@@ -56,7 +56,7 @@ button:hover {
   background-color: #45a049;
 }
 
-/* Error message */
+
 p {
   color: red;
   font-size: 14px;
@@ -127,7 +127,7 @@ textarea {
   margin: 0;
 }
 
-/* Navbar link styles */
+
 .navbar-link {
   text-decoration: none;
   color: white;
@@ -139,19 +139,19 @@ textarea {
   display: block; 
 }
 
-/* Hover effect on navbar links */
+
 .navbar-link:hover {
   background-color: #555;
   color: #f4f7fa;
 }
 
-/* Active link styling */
+
 .navbar-link.active {
   background-color: #4caf50;
   color: white;
 }
 
-/* Adjust navbar links for mobile */
+
 @media screen and (max-width: 768px) {
   .navbar-links {
     flex-direction: column;

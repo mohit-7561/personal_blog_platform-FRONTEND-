@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser, registerUser } from "../api";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // Import the CSS for toast notifications
+import "react-toastify/dist/ReactToastify.css";
+s;
 
 const AuthForm = ({ isRegister }) => {
   const [name, setName] = useState("");
@@ -66,7 +67,6 @@ const AuthForm = ({ isRegister }) => {
         <button type="submit">{isRegister ? "Register" : "Login"}</button>
       </form>
 
-      {/* Add ToastContainer to render the toasts */}
       <ToastContainer />
     </div>
   );
