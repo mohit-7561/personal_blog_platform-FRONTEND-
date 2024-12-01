@@ -1,161 +1,165 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body and Typography */
+/* General styles */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-}
-
-h1, h2, h3 {
-  color: #333;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-/* Navbar */
-nav {
-  background-color: #333;
-  padding: 15px 20px;
-  margin-bottom: 30px;
-  border-radius: 8px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-start;
-  gap: 20px;
-}
-
-nav ul li {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fa;
+  padding-top: 60px; /* Space for the fixed navbar */
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
+h1, h2 {
+  color: #333;
+  text-align: center;
 }
 
-nav ul li a:hover {
-  color: #f39c12;
-}
-
-/* Blog List */
-.blog-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.blog-post {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.blog-post:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.blog-post h3 {
-  font-size: 1.6rem;
-  color: #f39c12;
-}
-
-.blog-post p {
-  color: #555;
-  font-size: 1rem;
-  margin-top: 10px;
-}
-
-.blog-post a {
-  text-decoration: none;
-  color: #f39c12;
-  font-weight: bold;
-  margin-top: 10px;
-  display: inline-block;
-}
-
-/* Post Form */
+/* AuthForm styles */
 form {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Set a fixed width for the form */
   margin: 0 auto;
 }
 
-form h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
+input,
+textarea {
+  width: 90%; /* Ensures inputs take up the full width of the container */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
-form label {
-  display: block;
-  font-size: 1.1rem;
-  margin-bottom: 8px;
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Error message */
+p {
+  color: red;
+  font-size: 14px;
+}
+
+/* PostForm styles */
+form input,
+form textarea {
+  margin-bottom: 15px;
+}
+
+textarea {
+  height: 150px;
+}
+
+/* PostList styles */
+.post {
+  background-color: white;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post h3 {
+  margin: 0;
+  color: #333;
+}
+
+.post p {
   color: #555;
 }
 
-form input, form textarea {
+.toast-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+
+
+/* Navbar styles */
+.navbar {
+  background-color: #333;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visual depth */
+  display: flex;
+  justify-content: center; /* Center the navbar content */
+  align-items: center;
+}
+
+/* Navbar links container */
+.navbar-links {
+  display: flex;
+  justify-content: space-evenly; /* Distribute the items evenly */
+  width: 100%; /* Ensure links occupy full navbar width */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual list item styling */
+.navbar-links li {
+  margin: 0;
+}
+
+/* Navbar link styles */
+.navbar-link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 16px;
   border-radius: 4px;
-  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: block; /* Make the link a block element to support padding */
 }
 
-form button {
-  padding: 12px 20px;
-  border: none;
-  background-color: #f39c12;
-  color: #fff;
-  font-size: 1.2rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Hover effect on navbar links */
+.navbar-link:hover {
+  background-color: #555;
+  color: #f4f7fa;
 }
 
-form button:hover {
-  background-color: #e67e22;
+/* Active link styling */
+.navbar-link.active {
+  background-color: #4caf50;
+  color: white;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .blog-list {
-    grid-template-columns: 1fr;
-  }
-
-  nav ul {
+/* Adjust navbar links for mobile */
+@media screen and (max-width: 768px) {
+  .navbar-links {
     flex-direction: column;
     align-items: center;
   }
 
-  nav ul li {
-    margin-bottom: 10px;
-  }
-
-  form {
-    width: 90%;
-    padding: 20px;
+  .navbar-links li {
+    margin: 10px 0;
   }
 }

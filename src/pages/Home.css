@@ -1,0 +1,62 @@
+/* Container for the whole Home page */
+.home-container {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Heading style */
+.home-container h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #333333;
+  margin-bottom: 40px;
+}
+
+/* Container for the posts */
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Styling for individual post cards */
+.post-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for post cards */
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Title of the post */
+.post-card h3 {
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+/* Content of the post */
+.post-card p {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Styling for empty message */
+.empty-message {
+  font-size: 18px;
+  color: #888888;
+  text-align: center;
+  margin-top: 20px;
+}
