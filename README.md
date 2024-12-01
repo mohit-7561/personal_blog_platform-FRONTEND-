@@ -1,8 +1,20 @@
-# React + Vite
+Personal Blog Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple personal blog platform built with React for the frontend and Node.js with Express for the backend. This app allows users to register, log in, create posts, and view posts from others.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Architecture Overview
+
+Frontend (React.js):
+- The frontend is built using React.js.
+- It consists of several pages like Home, Login, Register, and Posts pages.
+- Authentication is handled via JWT tokens. The user logs in and receives a token which is then used for authorization when performing actions such as creating posts.
+
+Frontend Setup Instructions
+
+- git clone https://github.com/yourusername/personal-blog-platform.git
+- cd personal-blog-platform/frontend
+- npm install
+- npm start
+
+This will start the React development server and open the application in the browser at http://localhost:3000
